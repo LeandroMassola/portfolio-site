@@ -1,7 +1,6 @@
 .nav {
     width: 100%;
-    border-bottom: solid 2px black;
-    
+    border-bottom: solid 2px rgba(0, 0, 0, 0.519);
 }
 
 .cont__nav {
