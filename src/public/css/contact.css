@@ -1,0 +1,41 @@
+.main__contact {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title__contact {
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.form__contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    padding: 10%;
+    padding-right: 15%;
+}
+
+.cont-inputs__contact {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.labels__form {
+    margin-left: 10%;
+    width: 30%;
+}
+
+.inputs__contact {
+    width: 50%;
+    align-self: flex-end;
+    
+}

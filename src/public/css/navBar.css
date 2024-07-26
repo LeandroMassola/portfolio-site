@@ -16,9 +16,13 @@
 .logo__nav {
     color: white;
     width: 10%;
-    height: 5vh;
     cursor: pointer;
-    margin-right: 3%;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.link-home__nav {
+    margin-right: 5%;
 }
 
 .icon-menu__nav {
@@ -31,4 +35,42 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+}
+
+.cont-btn__nav {
+    display: flex;
+    width: 33%;
+    justify-content: space-around;
+}
+
+.links__nav {
+    text-decoration: none;
+    color: white;
+    border: solid 1px transparent;
+    padding: 4% 8% 4% 8%;
+    border-radius: 75%;
+}
+
+.links__nav:hover {
+    animation: border 1s linear backwards;
+}
+
+@keyframes border {
+    0% {
+        border-top-color: white;
+    }
+    25% {
+        border-right-color: white;
+    }
+    50% {
+        border-bottom-color: white;
+    }
+
+    75% {
+        border-left-color: white;
+    }
+
+    100% {
+        border-color: transparent  ;
+    }
 }

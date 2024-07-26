@@ -87,7 +87,7 @@
     margin-top: 10%;
 }
 
-.link-galery__home{
+.link-gallery__home{
     z-index: 2;
     position: relative;
     bottom: 60%;
@@ -98,47 +98,14 @@
     padding: 1%;
 }
 
-.link-galery__home:hover {
+.link-gallery__home:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.700);
     transition: 0.7s;
     border-color: white;
 }
 
-/*Footer*/
 
-.footer {
-    background-color: black;
-    color: white;
-}
-
-.cont__footer {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 20vh;
-    margin-left: 2%;
-}
-
-.cont-icons-media__footer {
-    display: flex;
-    gap: 2%;
-}
-
-.fa-brands {
-    cursor: pointer;
-}
-
-.cont-rights__footer {
-    width: 33%;
-    align-self: center;
-    margin-top: 15%;
-}
-
-.text-right__footer {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.4rem;
-}
 
 
 /*Media queries*/
@@ -149,6 +116,7 @@
         flex-flow: row wrap;
         justify-content: center;
         padding: 2%;
+        gap: 5rem;
     }
 
     .banner__home {
@@ -161,7 +129,7 @@
     }
 
     .cont-text-banner__home {
-        align-self: flex-start;
+        align-self: center;
         margin-top: 10%;
     }
 
@@ -174,6 +142,12 @@
         box-shadow: black 0rem 0rem 1rem 0.5rem;
         border-radius: 3%;
         margin-top: 10%;
+    }
+
+    .cont-quote-gallery__home {
+        display: flex;
+        border-top: solid black 1px;
+        padding-top: 5%;
     }
 
     .quote__home {
@@ -192,8 +166,8 @@
         margin-left: 10%;
     }
 
-    .link-galery__home {
-        
+    .link-gallery__home {
+        bottom: 17vh;
     }
 
     .img-wrapper__home {
