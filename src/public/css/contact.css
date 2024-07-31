@@ -15,27 +15,123 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20%;
     padding: 10%;
-    padding-right: 15%;
+    padding-top: 5%;
+    flex-flow: column;
+    width: 100%;
 }
 
 .cont-inputs__contact {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
+    border: solid 1px black;
+    border-radius: 25%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .labels__form {
-    margin-left: 10%;
-    width: 30%;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
 }
 
 .inputs__contact {
-    width: 50%;
-    align-self: flex-end;
+    border-radius: 10px;
+    font-family: 'Raleway';
+}
+
+.cont-btns__contact {
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.btn-submit__contact, .btn-reset__contact {
+    border: solid 1px transparent;
+    padding: 4% 8% 4% 8%;
+    border-radius: 75%;
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
     
+    .form__contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+        padding-top: 0%;
+        flex-flow: column;
+        width: 100%;
+    }
+    
+    .cont-inputs__contact {
+        display: flex;
+        flex-flow: column;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border: solid 1px black;
+        border-radius: 25%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    
+    .labels__form {
+        font-weight: lighter;
+        letter-spacing: 0.1rem;
+    }
+    
+    .inputs__contact {
+        border-radius: 10px;
+        border: solid black 1px;
+        outline: none;
+        transition: box-shadow 0.4s ease-in-out;
+    }
+
+    .inputs__contact:hover {
+        box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.693);
+    }
+    
+    .inputs__contact:focus {
+        outline: 2px black solid;
+    }
+
+    .cont-btns__contact {
+        margin-top: 5%;
+    }
+
+    .btn-submit__contact:hover, .btn-reset__contact:hover {
+        animation: border-btn 1s linear backwards;
+    }
+
+    @keyframes border-btn {
+        0% {
+            border-top-color: black;
+        }
+        25% {
+            border-right-color: black;
+        }
+        50% {
+            border-bottom-color: black;
+        }
+    
+        75% {
+            border-left-color: black;
+        }
+    
+        100% {
+            border-color: transparent  ;
+        }
+    }
 }
