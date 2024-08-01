@@ -45,6 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15%;
 }
 
 .cont-quote__home {
@@ -79,7 +80,7 @@
 
 .img-wrapper__home {
     width: 100%;
-    height: 14vh;
+    height: 25vh;
     object-fit: cover;
     opacity: 0.7;
     z-index: 1;
@@ -89,12 +90,12 @@
 .link-gallery__home{
     z-index: 2;
     position: relative;
-    bottom: 60%;
+    bottom: 85%;
     text-decoration: none;
     color: black;
     border: solid 2px black;
     background-color: rgba(255, 255, 255);
-    padding: 1%;
+    padding: 3%;
 }
 
 .link-gallery__home:hover {
@@ -104,6 +105,43 @@
     border-color: white;
 }
 
+/*Contact*/
+
+.contact__home {
+    padding: 5%;
+    margin-top: 15%;
+    border-top: 2px gainsboro solid;
+}
+
+.cont-contact__home {
+    border: solid 2px black;
+    border-radius: 20%;
+    padding: 5% 20% 5% 20%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text__home {
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+.link-contact__home {
+    text-decoration: none;
+    color: black;
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255);
+    padding: 5%;
+}
+
+.link-contact__home:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.700);
+    transition: 0.7s;
+    border-color: white;
+}
 
 
 
@@ -145,7 +183,7 @@
 
     .cont-quote-gallery__home {
         display: flex;
-        border-top: solid black 1px;
+        border-top: solid gainsboro 2px;
         padding-top: 5%;
     }
 
@@ -176,4 +214,11 @@
         border-radius: 3%;
         margin-top: 10%;
     }
+
+    .contact__home {
+        margin-top: 0;
+        width: 75%;
+    }
+
+    .contact-text__home {}
 }

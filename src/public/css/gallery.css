@@ -1,0 +1,14 @@
+
+
+.cont-carousel__gallery {
+    width: 100%;
+}
+
+.img-carousel__gallery {
+    width: 80%;
+    height: 50%;
+}
+
+.slick-track {
+    display: flex;
+}

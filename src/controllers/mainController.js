@@ -9,5 +9,9 @@ module.exports = {
 
     getContact: (req, res) => {
         res.render('main/contact')
+    },
+
+    getGallery: (req, res) => {
+        res.render('main/gallery')
     }
 }
