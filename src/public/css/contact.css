@@ -6,8 +6,20 @@
     
 }
 
-.title__contact {
+.hr__contact {
+    color: #000000;
+    width: 85%;
+}
+.hr-top__contact {
     margin-top: 20%;
+}
+
+.hr-bottom__contact {
+    margin-bottom: 20%;
+}
+
+.title__contact {
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 
@@ -29,9 +41,13 @@
     align-items: center;
     gap: 1rem;
     border: solid 1px black;
-    border-radius: 25%;
+    border-radius: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 5px 0px black;
+
 }
 
 .labels__form {
@@ -40,8 +56,18 @@
 }
 
 .inputs__contact {
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: 'Raleway';
+    outline: none;
+    border: none;
+    transition:all ease-in-out 0.3s;
+    padding: 2%;
+}
+
+
+.inputs__contact:focus {
+    outline: 2px white solid;
+    box-shadow: 0 0 8px 3px white;
 }
 
 .cont-btns__contact {
@@ -57,7 +83,7 @@
     border: solid 1px transparent;
     padding: 4% 8% 4% 8%;
     border-radius: 75%;
-    color: black;
+    color: white;
     cursor: pointer;
     background-color: transparent;
 }
@@ -94,17 +120,17 @@
     
     .inputs__contact {
         border-radius: 10px;
-        border: solid black 1px;
         outline: none;
         transition: box-shadow 0.4s ease-in-out;
     }
 
     .inputs__contact:hover {
-        box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.693);
+        box-shadow: 0 0 8px 3px white;
     }
     
     .inputs__contact:focus {
-        outline: 2px black solid;
+        outline: 2px white solid;
+        box-shadow: 0 0 8px 3px white;
     }
 
     .cont-btns__contact {
@@ -117,21 +143,31 @@
 
     @keyframes border-btn {
         0% {
-            border-top-color: black;
+            border-top-color: white;
         }
         25% {
-            border-right-color: black;
+            border-right-color: white;
         }
         50% {
-            border-bottom-color: black;
+            border-bottom-color: white;
         }
     
         75% {
-            border-left-color: black;
+            border-left-color: white;
         }
     
         100% {
             border-color: transparent  ;
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    .hr-top__contact {
+        margin-top: 10%;
+    }
+
+    .hr-bottom__contact {
+        margin-bottom: 10%;
     }
 }

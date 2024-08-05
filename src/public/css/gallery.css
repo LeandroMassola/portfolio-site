@@ -1,14 +1,58 @@
 
 
-.cont-carousel__gallery {
+.comics__gallery, .illustrations__gallery {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-carousel-comics__gallery, .cont-carousel-illustrations__gallery {
     width: 100%;
 }
 
 .img-carousel__gallery {
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    padding: 5%;
+    cursor: pointer;
+    transition: transform 0.9s ease-in-out;
 }
 
-.slick-track {
-    display: flex;
+.img-carousel__gallery:hover {
+    transform: scale(1.1);
 }
+
+.header__gallery {
+    font-size: 2rem;
+    border: 2px solid transparent;
+    padding: 5% 20% 5% 20%;
+    border-radius: 39px;
+}
+
+.header__gallery:hover {
+    animation: border 1.4s linear backwards;
+}
+
+@keyframes border {
+    0% {
+        border-top-color: black;
+    }
+    25% {
+        border-right-color: black;
+    }
+    50% {
+        border-bottom-color: black;
+    }
+
+    75% {
+        border-left-color: black;
+    }
+
+    100% {
+        border-color: transparent  ;
+    }
+}
+
+
+
+

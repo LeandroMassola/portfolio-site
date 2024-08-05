@@ -97,3 +97,23 @@
         font-family: 'Raleway';
     }
 }
+
+@media (min-width: 1024px) {
+    .cont-image__about, .cont-text__about {
+        width: 50%;
+    }
+
+    .cont-text__about {
+        background-color: black;
+        color: white;
+    }
+
+    .img-text__about, .img-bg__about {
+        position: relative;
+        top: -6%;
+    }
+
+    .img-bg__about {
+        width: 70%;
+    }
+}

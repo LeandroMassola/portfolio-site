@@ -189,12 +189,14 @@
 
     .quote__home {
         width: 50%;
+        margin-bottom: 0;
     }
 
     .wrapper__home {
         display: flex;
         align-self: center;
         width: 50%;
+        
     }
 
     .cont-wrapper__home {
@@ -218,6 +220,10 @@
     .contact__home {
         margin-top: 0;
         width: 75%;
+    }
+
+    .cont-contact__home {
+        border-radius: 5px;
     }
 
     .contact-text__home {}

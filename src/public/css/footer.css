@@ -5,6 +5,11 @@
     color: white;
 }
 
+.dark__footer {
+    background-color: white;
+    color: black;
+}
+
 .cont__footer {
     display: flex;
     flex-flow: column;

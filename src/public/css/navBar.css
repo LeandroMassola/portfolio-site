@@ -4,6 +4,10 @@
     background-color: black
 }
 
+.dark__nav {
+    background-color: white;
+}
+
 
 .cont__nav {
     display: flex;
@@ -11,6 +15,10 @@
     height: 7.5vh;
     justify-content: space-between;
     align-items: center;
+}
+
+.cont-btn__nav {
+    list-style: none;
 }
 
 /**BURGER MENU*/
@@ -58,6 +66,16 @@
 .logo__nav:hover {
     font-size: 2rem;
 }
+
+.logo-dark__nav {
+    color: black;
+}
+
+.logo-dark__nav:hover {
+    color: black;
+    font-size: 2rem;
+}
+
 
 .link-home__nav {
     margin-right: 5%;
@@ -125,12 +143,20 @@
     text-decoration: none;
     color: white;
     border: solid 1px transparent;
-    padding: 6% 10% 6% 10%;
+    padding: 10% 22% 10% 22%;
     border-radius: 75%;
 }
 
 .links__nav:hover {
     animation: border 1s linear backwards;
+}
+
+.links-dark__nav {
+    color: black;
+}
+
+.links-dark__nav:hover {
+    animation: borderDark 1s linear backwards
 }
 
 @keyframes border {
@@ -146,6 +172,27 @@
 
     75% {
         border-left-color: white;
+    }
+
+    100% {
+        border-color: transparent  ;
+    }
+}
+
+
+@keyframes borderDark {
+    0% {
+        border-top-color: black;
+    }
+    25% {
+        border-right-color: black;
+    }
+    50% {
+        border-bottom-color: black;
+    }
+
+    75% {
+        border-left-color: black;
     }
 
     100% {
