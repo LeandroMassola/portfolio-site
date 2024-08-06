@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+</head>
+<body>
+    <%-  include('../partials/navBar.ejs') %>
+    <main>
+        <section class="comics__gallery">
+            <h3 class="header__gallery">Comics</h3>
+            <div class="cont-carousel-comics__gallery">
+                <div class="cont-img__gallery"><img class="img-carousel__gallery img-1__gallery" src="/images/dibujo-cara-mujer.jpg" alt="" srcset=""></div>
+                <div class="cont-img__gallery"><img class="img-carousel__gallery img-2__gallery" src="/images/dibujo-taza-santi.jpg" alt="" srcset=""></div>
+                <div class="cont-img__gallery"><img class="img-carousel__gallery img-3__gallery" src="/images/santi-comic.jpg" alt="" srcset=""></div>
+            </div>
+        </section>
+        <hr>
+        <section class="illustrations__gallery">
+            <h3 class="header__gallery">Illustrations</h3>
+            <div class="cont-carousel-illustrations__gallery">
+                <div><img class="img-carousel__gallery img-1__gallery" src="/images/dibujo-cara-mujer.jpg" alt="" srcset=""></div>
+                <div><img class="img-carousel__gallery img-2__gallery" src="/images/dibujo-taza-santi.jpg" alt="" srcset=""></div>
+                <div><img class="img-carousel__gallery img-3__gallery" src="/images/santi-comic.jpg" alt="" srcset=""></div>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/js/slickInit.js"></script>
+</body>
+</html>

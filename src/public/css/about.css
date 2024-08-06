@@ -1,0 +1,119 @@
+.main__about {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column;
+}
+
+.cont-image__about {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.img-text__about {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.img-bg__about {
+    width: 100%;
+    height: 50%;
+    display: none;
+}
+
+.cont-text__about {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-text__about {
+    padding: 5%;
+}
+
+.text__about {
+    font-family: 'Raleway';
+    letter-spacing: 0.1rem;
+}
+
+
+/*Media querys*/
+
+@media (min-width: 768px) {
+    .main__about {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-flow: row nowrap;
+    }
+    
+    .cont-image__about {
+        width: 60%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+    }
+    
+    .img-text__about {
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .img-bg__about {
+        width: 100%;
+        height: 50%;
+        display: block;
+    }
+    
+    .cont-text__about {
+        display: flex;
+        width: 40%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-text__about {
+        padding: 5%;
+    }
+    
+    .text__about {
+        font-family: 'Raleway';
+    }
+}
+
+@media (min-width: 1024px) {
+    .cont-image__about, .cont-text__about {
+        width: 50%;
+    }
+
+    .cont-text__about {
+        background-color: black;
+        color: white;
+    }
+
+    .img-text__about, .img-bg__about {
+        position: relative;
+        top: -6%;
+    }
+
+    .img-bg__about {
+        width: 70%;
+    }
+}
