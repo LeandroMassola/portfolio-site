@@ -5,6 +5,8 @@ let footer = document.querySelector('.footer')
 
 window.addEventListener('resize', toDarkNav)
 
+toDarkNav()
+
 
 
 function toDarkNav() {
