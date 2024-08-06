@@ -92,15 +92,16 @@
     position: relative;
     bottom: 85%;
     text-decoration: none;
-    color: black;
+    color: white;
     border: solid 2px black;
-    background-color: rgba(255, 255, 255);
+    border-radius: 5px;
+    background-color: black;
     padding: 3%;
 }
 
 .link-gallery__home:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.700);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.76);
     transition: 0.7s;
     border-color: white;
 }
@@ -115,7 +116,7 @@
 
 .cont-contact__home {
     border: solid 2px black;
-    border-radius: 20%;
+    border-radius: 5px;
     padding: 5% 20% 5% 20%;
     display: flex;
     flex-flow: column;
@@ -148,11 +149,26 @@
 /*Media queries*/
 
 @media(min-width: 768px) {
+
+    .main-cont-1__home {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .main-cont-3__home {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .main__home {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        padding: 2%;
         gap: 5rem;
     }
 
@@ -161,7 +177,7 @@
     }
 
     .cont-banner__home {
-        flex-flow: row nowrap;
+        flex-flow: column;
         gap: 10%;
     }
 
@@ -171,7 +187,7 @@
     }
 
     .cont-text-banner__home, .img-banner__home {
-        width: 50%;
+        width: 100%;
     }
 
     .img-banner__home {
@@ -227,4 +243,56 @@
     }
 
     .contact-text__home {}
+}
+
+@media (min-width: 1024px) {
+    
+    .main-cont-1__home {
+        width: 100%;
+    }
+
+    .main-cont-2__home {
+        width: 100%;
+        background-color: black;
+    }
+
+    .main-cont-3__home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cont-banner__home {
+        flex-flow: column;
+    }
+
+    .cont-text-banner__home {
+        width: 80%;
+    }
+
+    .text-banner__home {
+        font-size: 3rem;
+    }
+
+    .img-banner__home {
+        margin-top: 0%;
+        width: 80%;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+    }
+
+    .cont-quote-gallery__home {
+        padding: 5%;
+    }
+
+
+    .cont-quote__home {
+        border-color: white;
+    }
+
+    .quote-text__home {
+        color: white;
+        border-color: white;
+    }
 }

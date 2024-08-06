@@ -23,9 +23,10 @@
     position: relative;
 
     display: block;
+    
     overflow: hidden;
 
-    margin: 0;
+    margin-left: 17%;
     padding: 0;
 }
 .slick-list:focus

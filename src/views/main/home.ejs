@@ -9,38 +9,50 @@
 <body>
     <%- include('../partials/navBar.ejs')%>
     <main class="main__home">
-        <section class="banner__home">
-            <div class="cont-banner__home">
-                <div class="cont-text-banner__home">
-                    <p class="text-banner__home"><u>Santiago Martin Official Site</u></p> 
+        <div class="main-cont-1__home">
+            <section class="banner__home">
+                <div class="cont-banner__home">
+                    <div class="cont-text-banner__home">
+                        <p class="text-banner__home"><u>Santiago Martin Official Site</u></p> 
+                    </div>
+                    <img src="images/dibujo-taza-santi.jpg" alt="" class="img-banner__home">
                 </div>
-                <img src="images/dibujo-taza-santi.jpg" alt="" class="img-banner__home">
-            </div>
-        </section>
-        <section class="cont-quote-gallery__home">
-            <div class="quote__home">
-                <div class="cont-quote__home">
-                    <p class="quote-text__home">
-                        "Creating is like giving life to something completely new. It's a process where imagination becomes reality through effort and dedication. Every stroke and line are steps on a path towards something unique."
+            </section>
+        </div>
+            
+        <div class="main-cont-2__home">
+            <section class="cont-quote-gallery__home">
+                <div class="quote__home">
+                    <div class="cont-quote__home">
+                        <p class="quote-text__home">
+                            "Creating is like giving life to something completely new. It's a process where imagination becomes reality through effort and dedication. Every stroke and line are steps on a path towards something unique."
+                        </p>
+                        <p class="quote-text__home">— Akira Toriyama</p>
+                    </div>
+                </div>
+                <div class="wrapper__home">
+                    <div class="cont-wrapper__home">
+                        <img src="images/dibujo-cara-mujer.jpg" alt="" class="img-wrapper__home">
+                        <a class="link-gallery__home" href="/gallery"><span>Gallery</span></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="main-cont-3__home">
+            <section class="contact__home">
+                <div class="cont-contact__home">
+                    <p class="contact-text__home">
+                        I specialize in personalized drawings that capture your unique ideas. From custom portraits to comic-style illustrations, we bring a blend of classic comics, manga, and superhero genres to your custom art needs. Let us turn your vision into reality with our distinctive artistic touch.
                     </p>
-                    <p class="quote-text__home">— Akira Toriyama</p>
+                    <a  class="link-contact__home" href="/contact">Let's Talk!</a>
                 </div>
-            </div>
-            <div class="wrapper__home">
-                <div class="cont-wrapper__home">
-                    <img src="images/dibujo-cara-mujer.jpg" alt="" class="img-wrapper__home">
-                    <a class="link-gallery__home" href="/gallery"><span><u>Gallery</u></span></a>
-                </div>
-            </div>
-        </section>
-        <section class="contact__home">
-            <div class="cont-contact__home">
-                <p class="contact-text__home">
-                    I specialize in personalized drawings that capture your unique ideas. From custom portraits to comic-style illustrations, we bring a blend of classic comics, manga, and superhero genres to your custom art needs. Let us turn your vision into reality with our distinctive artistic touch.
-                </p>
-                <a  class="link-contact__home" href="/contact">Let's Talk!</a>
-            </div>
-        </section>
+            </section>
+        </div>
+
+        
+        
+        
     </main>
     <%- include('../partials/footer.ejs')%>
 </body>
