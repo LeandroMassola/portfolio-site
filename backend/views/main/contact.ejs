@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <%- include('../partials/navBar.ejs')%>
+    <main class="main__contact">
+        <hr class="hr__contact hr-top__contact">
+        <h2 class="title__contact">Let's Talk!</h2>
+        <hr class="hr__contact hr-bottom__contact">
+
+        <form id="form-contact" class="form__contact" action="/contact" method="POST">
+            <div class="cont-inputs__contact">
+                <label class="labels__form" for="name">Name:</label>
+                <input id="name" name="name" type="text" placeholder="Your name" class="input-name__contact inputs__contact">
+                <span id="error-message-name" class="feedback__contact">The name must have at least 2 characters</span>
+
+                <% if (locals.errors && errors.name){ %>
+                    <p class="feedback"><%=errors.name.msg%></p>
+                <% } %>
+
+                <label class="labels__form" for="last-name">Last Name:</label>
+                <input id="last-name" name="lastName" placeholder="Your last name" type="text" class="input-last-name__contact inputs__contact">
+                <span id="error-message-last-name" class="feedback__contact">The last name must have at least 2 characters</span>
+
+                <% if (locals.errors && errors.lastName){ %>
+                    <p class="feedback"><%=errors.lastName.msg%></p>
+                <% } %>
+    
+                <label class="labels__form" for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="Your email" class="input-email__contact inputs__contact">
+                <span id="error-message-email" class="feedback__contact">The email must be an existing email</span>
+
+                <% if (locals.errors && errors.email){ %>
+                    <p class="feedback"><%=errors.email.msg%></p>
+                <% } %>
+
+                <label class="labels__form" for="subject">Subject:</label>
+                <input id="subject" name="subject" type="text" placeholder="Subject" class="input-subject__contact inputs__contact">
+
+                <label class="labels__form" for="message">Message:</label>
+                <textarea id="message" name="message" type="text" placeholder="Your message here..." class="input-message__contact inputs__contact"></textarea>
+                <span id="error-message-textarea" class="feedback__contact">The message must to have at least 10 characters</span>
+
+                <% if (locals.errors && errors.message){ %>
+                    <p class="feedback"><%=errors.message.msg%></p>
+                <% } %>
+                <div class="cont-btns__contact">
+                    <button id="submit-btn" class="btn-submit__contact" type="submit">Send</button>
+                    <button id="reset-btn" class="btn-reset__contact" type="reset">Clear</button>
+                </div>
+            </div>
+        </form>
+    </main> 
+    <%- include('../partials/footer.ejs')%>
+    <script src="/js/frontValidations/formFrontValidations.js"></script>
+</body>
+</html>
