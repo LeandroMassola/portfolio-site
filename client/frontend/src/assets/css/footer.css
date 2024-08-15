@@ -1,8 +1,9 @@
 /*Footer*/
 
 .footer {
-    background-color: black;
-    color: white;
+    margin-top: 20%;
+    background-color: white;
+    color: black;
 }
 
 .dark__footer {
@@ -34,6 +35,10 @@
     width: 33%;
     align-self: center;
     margin-top: 15%;
+}
+
+.social-title__footer {
+    margin-top: 10%;
 }
 
 .text-right__footer {
