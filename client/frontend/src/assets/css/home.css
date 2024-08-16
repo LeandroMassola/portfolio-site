@@ -5,12 +5,15 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20%;
+    margin-top: 20%;
 }
 
 .title-start__home {
     color: white;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 .trigger-start__home {
@@ -163,12 +166,7 @@
     padding: 3%;
 }
 
-.link-gallery__home:hover {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.76);
-    transition: 0.7s;
-    border-color: white;
-}
+
 
 /*Contact*/
 
@@ -176,6 +174,10 @@
     padding: 5%;
     margin-top: 35%;
     border-top: 2px grey solid;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .cont-contact__home {
@@ -199,16 +201,11 @@
     text-decoration: none;
     color: black;
     background-color: rgba(255, 255, 255);
-    padding: 5%;
-    margin-top: 30%;
+    padding: 3% 5%;
+    margin-top: 5%;
 }
 
-.link-contact__home:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.700);
-    transition: 0.7s;
-    border-color: white;
-}
+
 
 
 
@@ -252,6 +249,10 @@
         margin-top: 10%;
     }
 
+    .text-banner__home {
+        margin-top: 50%;
+    }
+
     .cont-text-banner__home, .img-banner__home {
         width: 100%;
     }
@@ -265,7 +266,7 @@
 
     .cont-quote-gallery__home {
         display: flex;
-        border-top: solid gainsboro 2px;
+        border-top: solid grey 2px;
         padding-top: 5%;
     }
 
@@ -350,6 +351,12 @@
         font-size: 3rem;
     }
 
+    .cont-img__gallery {
+        display: flex;
+        margin-left: 10%;
+    }
+
+    
     .img-banner__home {
         margin-top: 0%;
         width: 80%;

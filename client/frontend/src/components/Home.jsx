@@ -49,15 +49,17 @@ export default function Home({setIsContentVisible}) {
         setIsContentVisible(true)
         let iconStart = document.getElementById('triggerStart')
         let titleStart = document.getElementById('titleStart')
-        iconStart.style.opacity = '0'
+        let containerTitleHome = document.querySelector('.cont-title-start__home')
+        
+        iconStart.style.display = 'none'
         iconStart.style.transition = ' 1s'
-        titleStart.style.opacity = '0'
-        titleStart.style.transition = '1s'
-
+        /* titleStart.style.display = 'none'
+        titleStart.style.transition = '1s' */
+        titleStart.style.marginBottom = '20%'
         controlsStartHome.start({
             opacity: 1,
             transition: {duration: 2},
-            y: -300
+            y:-50
         })
     }
 
@@ -211,10 +213,10 @@ export default function Home({setIsContentVisible}) {
             <div className="main-cont-1__home">
                 <section className="banner__home">
                     <div className="cont-banner__home">
-                        <div className={`cont-text-banner__home`}>
+                        {/* <div className={`cont-text-banner__home`}>
                             <p className="title-banner__home title-name__home">Santiago Martin</p> 
                             <p className="title-banner__home">Official Site</p>
-                        </div>
+                        </div> */}
 
                         <Slider className="cont-carousel-comics__gallery" {...settings}>
                             <div className="cont-img__gallery"><img className="img-carousel__gallery img-1__gallery" src="/images/dibujo-cara-mujer.jpg" alt=""  /></div>
@@ -251,7 +253,18 @@ export default function Home({setIsContentVisible}) {
                     <div className="wrapper__home">
                         <div className="cont-wrapper__home">
                             <img src={dibujoMujer} alt="" className="img-wrapper__home" />
-                            <a className="link-gallery__home" href="/gallery"><span>Gallery</span></a>
+                            <motion.a whileHover={{
+                                    color: 'black',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.76)',
+                                    borderColor: 'white',
+                                    boxShadow: 'white 0rem 0rem 0.8rem',
+                                    transition:{
+                                        duration: 1.5,
+                                        ease: 'easeInOut'
+                                    }
+                                    }} className="link-gallery__home" href="/gallery">
+                                    <span>Gallery</span>
+                            </motion.a>
                         </div>
                     </div>
                 </section>
@@ -263,8 +276,19 @@ export default function Home({setIsContentVisible}) {
                         <p className="contact-text__home">
                             I specialize in personalized drawings that capture your unique ideas. From custom portraits to comic-style illustrations, we bring a blend of classNameic comics, manga, and superhero genres to your custom art needs. Let us turn your vision into reality with our distinctive artistic touch.
                         </p>
-                        <a  className="link-contact__home" href="/contact">Let's Talk!</a>
                     </div>
+                    <motion.a whileHover={{
+                        color: 'white',
+                        backgroundColor: 'rgb(0,0,0)',
+                        transition: 0.7,
+                        border: 'solid white 0.1rem',
+                        boxShadow: 'white 0rem 0rem 0.8rem',
+                        transition:{
+                                duration: 1.5,
+                                ease: 'easeInOut'
+                            }
+                    }} className="link-contact__home" href="/contact">Let's Talk!</motion.a>
+
                 </section>
             </motion.div>
 
