@@ -34,7 +34,7 @@ export default function Home({setIsContentVisible}) {
             y: [0, -20, 0],
             transition: {
                 duration: 0.5,
-                repeat: 5,
+                repeat: 3,
                 repeatType: 'loop'
             }
         })
@@ -55,7 +55,7 @@ export default function Home({setIsContentVisible}) {
         iconStart.style.transition = ' 1s'
         /* titleStart.style.display = 'none'
         titleStart.style.transition = '1s' */
-        titleStart.style.marginBottom = '20%'
+        titleStart.style.marginBottom = '10%'
         controlsStartHome.start({
             opacity: 1,
             transition: {duration: 2},
@@ -219,9 +219,21 @@ export default function Home({setIsContentVisible}) {
                         </div> */}
 
                         <Slider className="cont-carousel-comics__gallery" {...settings}>
-                            <div className="cont-img__gallery"><img className="img-carousel__gallery img-1__gallery" src="/images/dibujo-cara-mujer.jpg" alt=""  /></div>
-                            <div className="cont-img__gallery"><img className="img-carousel__gallery img-2__gallery" src="/images/dibujo-taza-santi.jpg" alt=""  /></div>
-                            <div className="cont-img__gallery"><img className="img-carousel__gallery img-3__gallery" src="/images/santi-comic.jpg"  alt="" /></div>
+                            <div className="cont-img__gallery">
+                                <a href="/gallery">
+                                    <img className="img-carousel__gallery img-1__gallery" src="/images/dibujo-cara-mujer.jpg" alt=""  />
+                                </a>
+                            </div>
+                            <div className="cont-img__gallery">
+                                <a href="/gallery">
+                                    <img className="img-carousel__gallery img-2__gallery" src="/images/dibujo-taza-santi.jpg" alt=""  />
+                                </a>
+                            </div>
+                            <div className="cont-img__gallery">
+                                <a href="/gallery">
+                                    <img className="img-carousel__gallery img-3__gallery" src="/images/santi-comic.jpg"  alt="" />
+                                </a>
+                            </div>
                         </Slider>
                         
                         <motion.div animate={controls} className={`cont-text-banner__home cont-text-art__home`}>
@@ -262,7 +274,7 @@ export default function Home({setIsContentVisible}) {
                                         duration: 1.5,
                                         ease: 'easeInOut'
                                     }
-                                    }} className="link-gallery__home" href="/gallery">
+                                    }} whileTap={{ scale: 0.9 }} className="link-gallery__home" href="/gallery">
                                     <span>Gallery</span>
                             </motion.a>
                         </div>
@@ -279,15 +291,14 @@ export default function Home({setIsContentVisible}) {
                     </div>
                     <motion.a whileHover={{
                         color: 'white',
-                        backgroundColor: 'rgb(0,0,0)',
-                        transition: 0.7,
-                        border: 'solid white 0.1rem',
+                        backgroundColor: 'rgb(0,0,0, 0.76)',
+                        border: 'solid white 0.2rem',
                         boxShadow: 'white 0rem 0rem 0.8rem',
                         transition:{
-                                duration: 1.5,
+                                duration: 1,
                                 ease: 'easeInOut'
                             }
-                    }} className="link-contact__home" href="/contact">Let's Talk!</motion.a>
+                    }} whileTap={{ scale: 0.9 }} className="link-contact__home" href="/contact">Let's Talk!</motion.a>
 
                 </section>
             </motion.div>

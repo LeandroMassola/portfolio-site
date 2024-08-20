@@ -1,12 +1,9 @@
 .nav {
     width: 100%;
-    border-bottom: solid 2px rgba(0, 0, 0, 0.519);
     background-color: black;
 }
 
-.dark__nav {
-    background-color: white;
-}
+
 
 
 .cont__nav {
@@ -17,6 +14,7 @@
     align-items: center;
     padding-left:  5%;
     padding-right: 5%;
+    margin-top: 2%;
 }
 
 .cont-btn__nav {
@@ -149,13 +147,7 @@
 .links__nav {
     text-decoration: none;
     color: white;
-    border: solid 1px transparent;
-    padding: 10% 22% 10% 22%;
-    border-radius: 75%;
-}
-
-.links__nav:hover {
-    animation: border 1s linear backwards;
+    padding: 20% 22% 20% 22%;
 }
 
 .links-dark__nav {
@@ -210,6 +202,7 @@
 @media (min-width: 1024px) {
     .cont-btn__nav {
         display: flex;
+        margin-left: 5%;
     }
     
     .cont-burguer-menu__nav, .icon-menu__nav {

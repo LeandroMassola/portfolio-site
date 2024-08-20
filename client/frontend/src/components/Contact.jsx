@@ -1,7 +1,14 @@
 /* import('../assets/css/contact.css') */
+import { useEffect } from 'react'
 import styles from '../assets/css/contact.module.css'
+import {motion} from 'framer-motion'
+export default function Contact({setIsContentVisible}) {
 
-export default function Contact() {
+    useEffect(()=> {
+        setIsContentVisible(true)
+
+    }, [])
+
     return (
         <div className={styles.main}>
             <hr className={styles.hrTop}/>
@@ -44,8 +51,33 @@ export default function Contact() {
                     <p className="feedback"><%=errors.message.msg%></p>
                 <% } %> */}
                                             <div className={styles.contBtns}>
-                                                <button id="submit-btn" className={styles.btnSubmit} type="submit">Send</button>
-                                                <button id="reset-btn" className={styles.btnReset}>Clear</button>
+                                                <motion.button 
+                                                    whileHover={{
+                                                        color: 'black',
+                                                        backgroundColor: 'rgba(255, 255, 255, 0.76)',
+                                                        borderColor: 'white',
+                                                        boxShadow: 'white 0rem 0rem 0.8rem',
+                                                        transition:{
+                                                            duration: 0.2,
+                                                            ease: 'easeInOut'
+                                                        }
+                                                    }} 
+                                                    whileTap={{ scale: 0.9 }} id="submit-btn" className={styles.btnSubmit} type="submit">Send
+                                                </motion.button>
+
+                                                <motion.button 
+                                                    whileHover={{
+                                                        color: 'black',
+                                                        backgroundColor: 'rgba(255, 255, 255, 0.76)',
+                                                        borderColor: 'white',
+                                                        boxShadow: 'white 0rem 0rem 0.8rem',
+                                                        transition:{
+                                                            duration: 0.2,
+                                                            ease: 'easeInOut'
+                                                        }
+                                                    }} 
+                                                    whileTap={{ scale: 0.9 }} id="reset-btn" type='reset' className={styles.btnReset}>Clear
+                                                </motion.button>
                                             </div>
                                         </div>
                                     </form>

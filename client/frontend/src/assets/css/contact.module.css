@@ -7,7 +7,7 @@
 }
 
 .hrTop {
-    color: #000000;
+    color: white;
     width: 85%;
     margin-top: 20%;
 }
@@ -21,6 +21,7 @@
 .title {
     margin-top: 5%;
     margin-bottom: 5%;
+    color: white;
 }
 
 .form {
@@ -119,13 +120,13 @@
     .contInputs {
         display: flex;
         flex-flow: column;
-        width: 60%;
+        width: 80%;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        border: solid 1px black;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        border: solid 0.1rem white;
+        border-radius: 1rem;
+        
     }
     
     .labels {
@@ -137,6 +138,8 @@
         border-radius: 10px;
         outline: none;
         transition: box-shadow 0.4s ease-in-out;
+        width: 75%;
+        letter-spacing: 0.1rem;
     }
 
     .inputs:hover {
@@ -152,11 +155,7 @@
         margin-top: 5%;
     }
 
-    .btnSubmit:hover, .btn-reset:hover {
-        border-color: white;
-        background-color: white;
-        color: black;
-    }
+    
 
     /* @keyframes border-btn {
         0% {
@@ -186,5 +185,9 @@
 
     .hrBottom {
         margin-bottom: 10%;
+    }
+
+    .contInputs {
+        width: 60%;
     }
 }
