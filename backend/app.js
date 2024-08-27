@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const indexRouter = require('./routes/index.routes');
 const path = require('path')
+const cors = require('cors')
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+
+app.use(cors());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -12,6 +15,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+
+
 
 // Sirve los archivos de React en producción
 if (process.env.NODE_ENV === 'production') {

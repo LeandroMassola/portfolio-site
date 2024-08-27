@@ -338,7 +338,6 @@
     }
     .cont-img__gallery {
         display: flex;
-        margin-left: 5%;
         margin-top: -20%;
         overflow: hidden;
         transform: scale(0.5);

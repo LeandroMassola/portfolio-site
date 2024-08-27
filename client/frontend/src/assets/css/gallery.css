@@ -63,6 +63,10 @@
 
     @media(min-width: 1024px) {
 
+        .cont-carousel-comics__gallery, .cont-carousel-illustrations__gallery {
+            width: 75%;
+        }
+
 
         .img-carousel__gallery {
             width: 100%;

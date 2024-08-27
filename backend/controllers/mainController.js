@@ -1,29 +1,35 @@
 const {validationResult} = require('express-validator')
+const nodemailer = require('nodemailer');
 
 module.exports = {
-    getIndex: (req, res) => {
-        res.render('main/home');
-    },
+    sendEmail: (req, res)=> {
 
-    getAbout: (req, res) => {
-        res.render('main/about')
-    },
-
-    getContact: (req, res) => {
-        res.render('main/contact')
-    },
-
-    sendContact: (req, res) => {
         const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            res.render('main/contact', {errors: errors.mapped()})
-        } else {
-            res.send('formulario enviado con éxito')
-            res.redirect('main/home')
-        }
-    },
 
-    getGallery: (req, res) => {
-        res.render('main/gallery')
+        if(!errors.isEmpty()) {
+            return  res.status(400).json({errors: errors.array()})
+        }
+
+        const transport = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'leandromassola.lm@gmail.com',
+                pass: 'ssfl dlah qbco irmr '
+            }
+        })
+        
+        const mailOptions = {
+            from: req.body.email,
+            to: 'leandromassola.lm@gmail.com',
+            subject: `Mensaje de ${req.body.name} ${req.body.lastName}`,
+            text: req.body.message
+        }
+
+        transport.sendMail(mailOptions, (error, info)=> {
+            if(error) {
+                return res.status(500).send(error);
+            }
+            res.status(200).send('The message has sent succesfully')
+        })
     }
 }

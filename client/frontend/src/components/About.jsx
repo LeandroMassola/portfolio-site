@@ -1,10 +1,14 @@
+import { useEffect } from 'react'
 import styles from '../assets/css/about.module.css'
 
 
 export default function About({setIsContentVisible}) {
     
     document.title = 'About'
-    setIsContentVisible(true)
+    useEffect(()=> {
+        setIsContentVisible(true)
+
+    },[])
     return (
     <div className={styles.main}>
         <div className={styles.contImage}>
