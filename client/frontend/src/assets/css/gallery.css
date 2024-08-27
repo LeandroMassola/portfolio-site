@@ -1,0 +1,86 @@
+
+
+    .comics__gallery, .illustrations__gallery {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 10%;
+    }
+
+    .cont-carousel-comics__gallery, .cont-carousel-illustrations__gallery {
+        width: 100%;
+    }
+    .slick-prev, .slick-next {
+        background: none; /* Elimina el fondo gris */
+        border: none;     /* Elimina cualquier borde */
+        z-index: 10;       /* Asegúrate de que esté en frente del contenido */
+        
+    }
+    
+
+    .slick-prev::before, .slick-next::before {
+        color: white;      /* Cambia el color de la flecha */
+    }
+
+    .slick-dots li button::before {
+        color: white;
+        opacity: 1;
+    }
+
+    .slick-dots li.slick-active button::before {
+        color: grey;
+    }
+
+    .img-carousel__gallery {
+        width: 100%;
+        padding: 0%;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+
+    
+
+    .header__gallery {
+        font-size: 2rem;
+        border: 2px solid transparent;
+        padding: 5% 20% 5% 20%;
+        border-radius: 39px;
+        color: black;
+        background-color: white;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    
+
+    .break__gallery {
+        margin-bottom: 5%;
+        margin-top: 15%;
+    }
+
+
+
+    @media(min-width: 1024px) {
+
+        .cont-carousel-comics__gallery, .cont-carousel-illustrations__gallery {
+            width: 75%;
+        }
+
+
+        .img-carousel__gallery {
+            width: 100%;
+        }
+
+        .slick-next {
+            right: -5%;
+        }
+        .slick-prev {
+            left: -5%;
+        }
+        
+    }
+
+
+
+
