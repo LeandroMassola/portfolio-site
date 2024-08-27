@@ -7,15 +7,15 @@ const cors = require('cors')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const allowedOrigins = ['https://scintillating-piroshki-5341b6.netlify.app/'];
 app.use(cors({
-    origin: allowedOrigins
+    origin: 'https://scintillating-piroshki-5341b6.netlify.app/', // Cambia esto por la URL de tu frontend en Netlify
+    methods: ['GET', 'POST'],
 }));
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+/* app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')); */
 
-app.use(express.static(path.join(__dirname, 'public')));
+/* app.use(express.static(path.join(__dirname, 'public'))); */
 
 app.use('/', indexRouter);
 
@@ -23,13 +23,13 @@ app.use('/', indexRouter);
 
 
 // Sirve los archivos de React en producción
-if (process.env.NODE_ENV === 'production') {
+/* if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'index.html'));
     });
-}
+} */
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
