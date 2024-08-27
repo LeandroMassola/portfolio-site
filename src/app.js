@@ -7,7 +7,10 @@ const cors = require('cors')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+const allowedOrigins = ['https://scintillating-piroshki-5341b6.netlify.app/'];
+app.use(cors({
+    origin: allowedOrigins
+}));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
