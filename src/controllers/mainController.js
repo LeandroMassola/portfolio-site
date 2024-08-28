@@ -27,9 +27,9 @@ module.exports = {
 
         transport.sendMail(mailOptions, (error, info)=> {
             if(error) {
-                return res.status(500).send(error);
+                return res.status(500).json({errorMessage: error});
             }
-            res.status(200).send('The message has sent succesfully')
+            res.status(200).json('The message has sent succesfully')
         })
     }
 }
