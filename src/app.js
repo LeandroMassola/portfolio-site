@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-    origin: 'https://scintillating-piroshki-5341b6.netlify.app/', // Cambia esto por la URL de tu frontend en Netlify
+    origin: 'https://scintillating-piroshki-5341b6.netlify.app/contact', // Cambia esto por la URL de tu frontend en Netlify
     methods: ['GET', 'POST'],
 }));
 
